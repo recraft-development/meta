@@ -1,0 +1,29 @@
+{
+    "id": "example_ability",
+    "displayName": [
+        "Example Ability"
+    ],
+    "description": [
+        [
+            "An example ability description"
+        ]
+    ],
+    "maxLevel": 1,
+    "skill": "ARCHERY",
+    "spells": [
+        {
+            "example_spell": 1
+        }
+    ],
+    "prices": [
+        {
+            "points": 1,
+            "gold": 10000
+        }
+    ],
+    "requirements": [
+        {
+            "level": 10
+        }
+    ]
+}

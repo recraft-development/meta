@@ -1,0 +1,21 @@
+{
+    "id": "example_spell",
+    "displayName": [
+        "Example Spell"
+    ],
+    "description": [
+        [
+            "An example spell that increases player movement speed by 10 points"
+        ]
+    ],
+    "spellType": "PASSIVE",
+    "attributes": [
+        [
+            {
+                "attribute": "MOVEMENT_SPEED",
+                "operation": "ADD_NUMBER",
+                "value": 10
+            }
+        ]
+    ]
+}

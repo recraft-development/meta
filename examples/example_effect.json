@@ -1,0 +1,20 @@
+{
+    "id": "speed_boost",
+    "displayName": [
+        "Speed Boost"
+    ],
+    "description": [
+        [
+            "<green>I am speed!"
+        ]
+    ],
+    "attributes": [
+        [
+            {
+                "attribute": "MOVEMENT_SPEED",
+                "operation": "MULTIPLY_PERCENT",
+                "value": 0.2
+            }
+        ]
+    ]
+}

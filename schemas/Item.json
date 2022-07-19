@@ -1456,6 +1456,12 @@
     "Record<Enchantment,number>": {
       "type": "object",
       "properties": {
+        "ARROW_DAMAGE": {
+          "type": "number"
+        },
+        "DURABILITY": {
+          "type": "number"
+        },
         "PROTECTION_ENVIRONMENTAL": {
           "type": "number"
         },
@@ -1516,13 +1522,7 @@
         "SILK_TOUCH": {
           "type": "number"
         },
-        "DURABILITY": {
-          "type": "number"
-        },
         "LOOT_BONUS_BLOCKS": {
-          "type": "number"
-        },
-        "ARROW_DAMAGE": {
           "type": "number"
         },
         "ARROW_KNOCKBACK": {

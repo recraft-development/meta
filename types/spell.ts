@@ -6,9 +6,9 @@ export interface Spell {
   /**
    * Array of strings per level
    */
-  displayName?: Array<string>;
+  displayName: Array<string>;
   /** Array of string arrays per level */
-  description?: Array<Array<string>>;
+  description: Array<Array<string>>;
   spellType: SpellType;
   /** Array of listener id arrays, per level */
   listeners?: Array<Array<string>>;

@@ -53,6 +53,8 @@
     }
   },
   "required": [
+    "description",
+    "displayName",
     "id",
     "spellType"
   ],

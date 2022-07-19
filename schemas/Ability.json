@@ -5,7 +5,7 @@
       "type": "string"
     },
     "displayName": {
-      "description": "Array of strings per level",
+      "description": "Array of strings per level\nExample\n[\n  \"Punch\", // Level 1 name\n  \"Strong punch\", // Level 2 name\n  \"Super Punch\" // Level 3 name\n]",
       "type": "array",
       "items": {
         "type": "string"
@@ -46,8 +46,7 @@
     "id",
     "maxLevel",
     "requirements",
-    "skill",
-    "spells"
+    "skill"
   ],
   "definitions": {
     "Skill": {
@@ -77,13 +76,7 @@
         "spells": {
           "$ref": "#/definitions/Record<string,number>"
         }
-      },
-      "required": [
-        "abilities",
-        "level",
-        "skills",
-        "spells"
-      ]
+      }
     },
     "Record<string,number>": {
       "type": "object"
