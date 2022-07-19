@@ -49,8 +49,7 @@ export type AttributeType =
   | "TEMPERATURE_SELF_WARM_MAX"
   | "TEMPERATURE_SELF_COOL_MAX"
   | "TEMPERATURE_COOLING"
-  | "TEMPERATURE_WARMING"
-  | string;
+  | "TEMPERATURE_WARMING";
 
 export interface Attribute {
   attribute: AttributeType;

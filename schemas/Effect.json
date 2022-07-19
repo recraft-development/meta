@@ -59,7 +59,7 @@
       "type": "object",
       "properties": {
         "attribute": {
-          "type": "string"
+          "$ref": "#/definitions/AttributeType"
         },
         "operation": {
           "$ref": "#/definitions/Operation"
@@ -73,6 +73,45 @@
         "operation",
         "value"
       ]
+    },
+    "AttributeType": {
+      "enum": [
+        "ACCURACY",
+        "AGILITY",
+        "ARMOR",
+        "ARROW_CHARGE_BOOST",
+        "ARROW_DAMAGE",
+        "ARROW_PIERCING",
+        "ARROW_POWER",
+        "ATTACK_DAMAGE",
+        "ATTACK_SPEED",
+        "DURABILITY",
+        "HEALTH_REGENERATION",
+        "HEALTH_REGENERATION_DELAY",
+        "HEALTH_REGENERATION_RATE",
+        "INTELLIGENCE",
+        "KNOCKBACK_RESISTANCE",
+        "MAX_HEALTH",
+        "MAX_STAMINA",
+        "MOVEMENT_SPEED",
+        "STAMINA_BLOCK_EXHAUSTION_MULTIPLIER",
+        "STAMINA_FLOAT_EXHAUSTION",
+        "STAMINA_HIT_EXHAUSTION",
+        "STAMINA_JUMP_EXHAUSTION",
+        "STAMINA_MISS_EXHAUSTION",
+        "STAMINA_REGENERATION",
+        "STAMINA_REGENERATION_DELAY",
+        "STAMINA_REGENERATION_RATE",
+        "STAMINA_SPRINT_EXHAUSTION",
+        "STAMINA_SWIM_EXHAUSTION",
+        "STRENGTH",
+        "TEMPERATURE_COOLING",
+        "TEMPERATURE_SELF_COOL_MAX",
+        "TEMPERATURE_SELF_WARM_BASE",
+        "TEMPERATURE_SELF_WARM_MAX",
+        "TEMPERATURE_WARMING"
+      ],
+      "type": "string"
     },
     "Operation": {
       "enum": [
