@@ -1,0 +1,93 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "displayName": {
+      "description": "Array of strings per level",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "description": "Array of string arrays per level",
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "skill": {
+      "$ref": "#/definitions/Skill"
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Requirements"
+      }
+    },
+    "maxLevel": {
+      "type": "number"
+    },
+    "spells": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Record<string,number>"
+      }
+    }
+  },
+  "required": [
+    "description",
+    "displayName",
+    "id",
+    "maxLevel",
+    "requirements",
+    "skill",
+    "spells"
+  ],
+  "definitions": {
+    "Skill": {
+      "enum": [
+        "ACROBATICS",
+        "ALCHEMY",
+        "ARCHERY",
+        "CRAFTING",
+        "FIGHTING",
+        "MINING",
+        "SURVIVAL"
+      ],
+      "type": "string"
+    },
+    "Requirements": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "number"
+        },
+        "skills": {
+          "$ref": "#/definitions/Record<string,number>"
+        },
+        "abilities": {
+          "$ref": "#/definitions/Record<string,number>"
+        },
+        "spells": {
+          "$ref": "#/definitions/Record<string,number>"
+        }
+      },
+      "required": [
+        "abilities",
+        "level",
+        "skills",
+        "spells"
+      ]
+    },
+    "Record<string,number>": {
+      "type": "object"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

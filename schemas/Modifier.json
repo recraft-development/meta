@@ -1,0 +1,89 @@
+{
+  "type": "object",
+  "properties": {
+    "priority": {
+      "type": "number"
+    },
+    "listeners": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stats": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Attribute"
+      }
+    },
+    "enchantments": {
+      "$ref": "#/definitions/Map<Enchantment,number>"
+    },
+    "prefix": {
+      "type": "string"
+    },
+    "suffix": {
+      "type": "string"
+    },
+    "lore": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "enchantments",
+    "listeners",
+    "priority",
+    "stats"
+  ],
+  "definitions": {
+    "Attribute": {
+      "type": "object",
+      "properties": {
+        "attribute": {
+          "type": "string"
+        },
+        "operation": {
+          "$ref": "#/definitions/Operation"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "attribute",
+        "operation",
+        "value"
+      ]
+    },
+    "Operation": {
+      "enum": [
+        "ADD_NUMBER",
+        "ADD_NUMBER_SELF",
+        "ADD_PERCENT",
+        "ADD_PERCENT_SELF",
+        "MULTIPLY_PERCENT",
+        "MULTIPLY_PERCENT_SELF"
+      ],
+      "type": "string"
+    },
+    "Map<Enchantment,number>": {
+      "type": "object",
+      "properties": {
+        "size": {
+          "type": "number"
+        },
+        "__@toStringTag@24": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "__@toStringTag@24",
+        "size"
+      ]
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

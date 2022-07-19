@@ -1,0 +1,100 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "displayName": {
+      "description": "Array of strings per level",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "description": "Array of string arrays per level",
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "spellType": {
+      "$ref": "#/definitions/SpellType"
+    },
+    "listeners": {
+      "description": "Array of listener id arrays, per level",
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "attributes": {
+      "description": "Array of attributes per level",
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/Attribute"
+        }
+      }
+    },
+    "attributesPerLevel": {
+      "description": "Array of attributes that automatically multiplied by ability level",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Attribute"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "spellType"
+  ],
+  "definitions": {
+    "SpellType": {
+      "enum": [
+        "ACTIVE",
+        "PASSIVE",
+        "TOGGLE"
+      ],
+      "type": "string"
+    },
+    "Attribute": {
+      "type": "object",
+      "properties": {
+        "attribute": {
+          "type": "string"
+        },
+        "operation": {
+          "$ref": "#/definitions/Operation"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "attribute",
+        "operation",
+        "value"
+      ]
+    },
+    "Operation": {
+      "enum": [
+        "ADD_NUMBER",
+        "ADD_NUMBER_SELF",
+        "ADD_PERCENT",
+        "ADD_PERCENT_SELF",
+        "MULTIPLY_PERCENT",
+        "MULTIPLY_PERCENT_SELF"
+      ],
+      "type": "string"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
